@@ -3,21 +3,25 @@ class ExampleButton extends React.Component {
         super(props);
         this.state = { isCLicked: false };
     }
-    render() {
-        if (this.state.isCLicked) {
-            return 'You clicked this';
-        }
-        return React.createElement(
-            'button',
-            { onClick: () => this.setState({ isCLicked: true }) },
-            'Click me!'
-        );
-    }
+    // render() {
+    //     if (this.state.isCLicked) {
+    //         return 'You clicked this';
+    //     }
+    //     return React.createElement(
+    //         'button',
+    //         { onClick: () => this.setState({ isCLicked: true }) },
+    //         'Click me!'
+    //     );
+    // }
 }
 
     // select root div
+    // const domContainer = document.querySelector('#root');
+    // // create the root of react dom
+    // const root = ReactDOM.createRoot(domContainer);
+    // // render what we see
+    // root.render(React.createElement(ExampleButton)); 
+
     const domContainer = document.querySelector('#root');
-    // create the root of react dom
     const root = ReactDOM.createRoot(domContainer);
-    // render what we see
-    root.render(React.createElement(ExampleButton)); 
+    root.render(React.createElement("h1", {}, "Our First React page has rendered")); 
